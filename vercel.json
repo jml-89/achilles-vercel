@@ -1,13 +1,11 @@
+                      
 {
   "version": 2,
+  "name": "achilles-vercel",
   "builds": [
     {
       "src": "index.js",
-      "use": "@vercel/node",
-      "config": {
-        "installCommand": "npm install",
-        "buildCommand": "npm run build" 
-      }
+      "use": "@vercel/node"
     }
   ],
   "routes": [
@@ -15,5 +13,7 @@
       "src": "/(.*)",
       "dest": "index.js"
     }
-  ]
+  ],
+  "devCommand": "NODE_ENV=dev nodemon ./index.js",
+  "buildCommand": "npm run gulp && NODE_ENV=production node ./index.js"
 }
