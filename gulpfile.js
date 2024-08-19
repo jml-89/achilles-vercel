@@ -3,9 +3,9 @@ var uglify = require("gulp-uglify");
 var concat = require("gulp-concat");
 
 function defaultTask(cb) {
-  return gulp.src("./clean.js")
+  return gulp.src("./index.js")
     .pipe(uglify())
-    .pipe(concat("index.js"))
+    .pipe(concat("ugly.js"))
     .pipe(gulp.dest("./"));
 }
 
