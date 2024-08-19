@@ -1,7 +1,5 @@
-                      
 {
   "version": 2,
-  "name": "achilles-vercel",
   "builds": [
     {
       "src": "index.js",
@@ -13,7 +11,5 @@
       "src": "/(.*)",
       "dest": "index.js"
     }
-  ],
-  "devCommand": "NODE_ENV=dev nodemon ./index.js",
-  "buildCommand": "npm run gulp && NODE_ENV=production node ./index.js"
+  ]
 }
